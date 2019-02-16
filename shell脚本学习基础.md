@@ -217,22 +217,34 @@
 
 15. ##### shell内建命令
 
-    使用type来确定一个命令是否为内建命令：
+    1. 使用type来确定一个命令是否为内建命令：
 
-    ```shell
-    type cd          #cd is a shell builtin    (内建命令)
-    type ifconfig    #ifconfig is /usr/sbin/ifconfig
-    ```
+       ```shell
+       type cd          #cd is a shell builtin    (内建命令)
+       type ifconfig    #ifconfig is /usr/sbin/ifconfig
+       ```
 
-    | bash    | :       | .      | [       | alias    | bg       | bind     |
-    | ------- | ------- | ------ | ------- | -------- | -------- | -------- |
-    | break   | builtin | cd     | command | compgen  | complete | continue |
-    | declare | dirs    | disown | echo    | enable   | eval     | exec     |
-    | exit    | export  | fc     | fg      | getopts  | hash     | help     |
-    | history | jobs    | kill   | let     | local    | logout   | popd     |
-    | printf  | pushd   | pwd    | read    | readonly | return   | set      |
-    | shift   | shopt   | source | suspend | test     | times    | trap     |
-    | type    | typeset | ulimit | umask   | unalias  | unset    | wait     |
+       | bash    | :       | .      | [       | alias    | bg       | bind     |
+       | ------- | ------- | ------ | ------- | -------- | -------- | -------- |
+       | break   | builtin | cd     | command | compgen  | complete | continue |
+       | declare | dirs    | disown | echo    | enable   | eval     | exec     |
+       | exit    | export  | fc     | fg      | getopts  | hash     | help     |
+       | history | jobs    | kill   | let     | local    | logout   | popd     |
+       | printf  | pushd   | pwd    | read    | readonly | return   | set      |
+       | shift   | shopt   | source | suspend | test     | times    | trap     |
+       | type    | typeset | ulimit | umask   | unalias  | unset    | wait     |
 
+16. ##### Shell特殊变量
 
+    | 变量 | 含义                                                       |
+    | ---- | ---------------------------------------------------------- |
+    | $0   | 当前脚本的文件名                                           |
+    | $n   | 传递给脚本或函数的参数。n是一个数字，表示第几个参数        |
+    | $#   | 传递给脚本或函数的参数个数                                 |
+    | $*   | 传递给脚本或函数的所有参数，当被“$*”时，将会作为一个整体   |
+    | $@   | 传递给脚本或函数的所有参数，当被“$@”时，将各个参数分开     |
+    | $?   | 上个命令的退出状态，或函数的返回值                         |
+    | $$   | 当前Shell进程ID。对于Shell脚本，就是这些脚本坐在的进程的ID |
+
+17. 
 
