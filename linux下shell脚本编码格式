@@ -1,0 +1,8 @@
+# 在windows下编写shell脚本之后，编写的脚本编码格式为windows
+# 在linux下执行脚本需要将编码格式修改为unix
+
+# 在linux中查看脚本编码格式
+vi 1.shell
+:set ff
+# 设置脚本格式为unix
+:set ff=unix
